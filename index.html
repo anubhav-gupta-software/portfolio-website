@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anubhav Gupta | AI Research • Systems • Enterprise</title>
+  <meta name="description" content="Computer Science student at USF • AI researcher • Enterprise applications developer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Matrix rain canvas -->
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+  
+  <!-- Noise overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <div class="nav-brand">
+      <span class="nav-prompt">anubhav@portfolio:~$</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#skills">stack</a></li>
+      <li><a href="#contact">connect</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+    <!-- Hero / Terminal -->
+    <section class="hero" id="hero">
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">anubhav@portfolio — zsh</span>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-line">
+            <span class="prompt">anubhav@portfolio:~$</span>
+            <span class="cmd" id="typed-cmd"></span>
+            <span class="cursor" id="cursor">█</span>
+          </div>
+          <div class="terminal-output" id="hero-output">
+            <p class="output-line"><span class="keyword">const</span> <span class="var">anubhav</span> = {</p>
+            <p class="output-line indent">  <span class="prop">role</span>: <span class="string">"AI Researcher & Applications Developer"</span>,</p>
+            <p class="output-line indent">  <span class="prop">education</span>: <span class="string">"University of South Florida — 4.0 GPA"</span>,</p>
+            <p class="output-line indent">  <span class="prop">focus</span>: [<span class="string">"LLMs"</span>, <span class="string">"Enterprise Systems"</span>, <span class="string">"Optimization"</span>],</p>
+            <p class="output-line indent">  <span class="prop">status</span>: <span class="string">"Building systems that solve measurable problems"</span></p>
+            <p class="output-line">};</p>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <span>scroll ↓</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="code-block">
+        <div class="code-header">
+          <span class="code-filename">about.md</span>
+          <span class="code-lang">markdown</span>
+        </div>
+        <pre class="code-content"><span class="comment"># About Me</span>
+
+<span class="keyword">Hi, I'm Anubhav Gupta</span> — a Computer Science student at the <span class="highlight">University of South Florida</span> with a 
+<span class="num">4.0</span> GPA, undergraduate AI researcher, and applications developer working at the enterprise level.
+
+I operate at the intersection of <span class="highlight">Artificial Intelligence</span>, <span class="highlight">systems engineering</span>, and 
+<span class="highlight">real-world production software</span>. My work spans enterprise automation, large language model 
+research, algorithm design, and scalable web platforms.
+
+<span class="comment">// I don't just build projects — I build systems that solve measurable problems.</span></pre>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <h2 class="section-title"><span class="comment">//</span> experience.log</h2>
+      
+      <div class="timeline">
+        <article class="job-card" data-aos>
+          <div class="job-meta">
+            <span class="job-company">Seminole Electric Cooperative, Inc.</span>
+            <span class="job-role">Applications Development Co-Op</span>
+            <span class="job-period">Sep 2025 — Present</span>
+          </div>
+          <div class="job-tags">
+            <span>C#</span><span>PowerShell</span><span>SQL</span><span>.NET</span>
+          </div>
+          <ul class="job-achievements">
+            <li>Built C# and PowerShell automation workflows migrating <strong>100,000+ records</strong></li>
+            <li>Reduced manual data transfer by <strong>70%</strong></li>
+            <li>Developed internal SQL/.NET reporting tools reducing validation errors by <strong>25%</strong></li>
+            <li>Evaluated enterprise AI readiness and contributed to foundational AI policy</li>
+          </ul>
+        </article>
+
+        <article class="job-card" data-aos>
+          <div class="job-meta">
+            <span class="job-company">USF GRASP Lab</span>
+            <span class="job-role">Undergraduate AI Researcher</span>
+            <span class="job-period">Ongoing</span>
+          </div>
+          <div class="job-tags">
+            <span>LLMs</span><span>Python</span><span>Research</span>
+          </div>
+          <ul class="job-achievements">
+            <li><em>Persona-Conditioned Behavioral Deviations and Targeted Unlearning in LLMs</em></li>
+            <li>Bias and behavioral deviation across demographic personas</li>
+            <li>Power-compliance patterns, interpretability, and mitigation strategies</li>
+            <li>Building responsible AI systems that are robust, fair, and aligned</li>
+          </ul>
+        </article>
+
+        <article class="job-card" data-aos>
+          <div class="job-meta">
+            <span class="job-company">CrossCompute</span>
+            <span class="job-role">Software Engineering Intern</span>
+            <span class="job-period">Jun — Aug 2025</span>
+          </div>
+          <div class="job-tags">
+            <span>OR-Tools</span><span>Python</span><span>GeoJSON</span><span>APIs</span>
+          </div>
+          <ul class="job-achievements">
+            <li>Solved NP-hard Vehicle Routing Problem using Google OR-Tools</li>
+            <li>Fallback routing logic reducing API dependency by <strong>95%</strong></li>
+            <li>Integrated OpenStreetMaps, HERE, and Google Maps APIs</li>
+            <li>GeoJSON dashboards for real-time analytics</li>
+          </ul>
+        </article>
+
+        <article class="job-card" data-aos>
+          <div class="job-meta">
+            <span class="job-company">USF World</span>
+            <span class="job-role">Student Assistant</span>
+            <span class="job-period">Dec 2024 — Sep 2025</span>
+          </div>
+          <div class="job-tags">
+            <span>Python</span><span>LLMs</span><span>Data</span>
+          </div>
+          <ul class="job-achievements">
+            <li>Managed global research datasets</li>
+            <li>Built AI classification pipeline using third-party LLMs</li>
+            <li>Reduced manual entry time by <strong>95%</strong> through semantic classification</li>
+          </ul>
+        </article>
+
+        <article class="job-card leadership" data-aos>
+          <div class="job-meta">
+            <span class="job-company">Leadership & Teaching</span>
+          </div>
+          <ul class="job-achievements">
+            <li><strong>TA — CDA 3201 (Logic Design)</strong> — USF Bellini College of AI, Cybersecurity & Computing</li>
+            <li><strong>Tech Chair — Google Developer Group @ USF</strong> — Led team of 8 technical leads</li>
+            <li><strong>Software Lead Shadow — ACM</strong> — DiagnoAI (CNN-based chest X-ray anomaly detection)</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <h2 class="section-title"><span class="comment">//</span> selected_projects</h2>
+      
+      <div class="projects-grid">
+        <article class="project-card featured" data-aos>
+          <div class="project-badge">🏆 HackaBull 2025 Track Winner</div>
+          <h3 class="project-name">CarbonCTRL</h3>
+          <p class="project-desc">AI-driven carbon emissions dashboard with Gemini API integration. Improved insight generation by 40%, reduced backend latency by 35%.</p>
+          <div class="project-tech">
+            <span>React</span><span>TypeScript</span><span>Supabase</span><span>Gemini API</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-aos>
+          <h3 class="project-name">PalmVerse</h3>
+          <p class="project-desc">Real-time sign language translation with 87% model accuracy. MediaPipe + OpenCV + Flask. Reduced processing latency by 15%.</p>
+          <div class="project-tech">
+            <span>Python</span><span>MediaPipe</span><span>OpenCV</span><span>Flask</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <h2 class="section-title"><span class="comment">//</span> tech_stack.config</h2>
+      
+      <div class="skills-grid" data-aos>
+        <div class="skill-category">
+          <span class="skill-label">Languages</span>
+          <span class="skill-items">C++ · Java · Python · C# · SQL · JavaScript</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-label">Frameworks</span>
+          <span class="skill-items">.NET · React · Node.js · Express · MongoDB · Supabase · Angular</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-label">AI & ML</span>
+          <span class="skill-items">LLMs · TensorFlow · CNNs · OR-Tools</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-label">Infrastructure</span>
+          <span class="skill-items">AWS · Linux CLI · Git · Jira · Postman</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- What Drives Me -->
+    <section class="section drive-section">
+      <div class="code-block drive-block">
+        <div class="code-header">
+          <span class="code-filename">mission.js</span>
+        </div>
+        <pre class="code-content"><span class="keyword">const</span> <span class="var">mission</span> = {
+  <span class="prop">build</span>: [
+    <span class="string">"AI systems that interact with power structures responsibly"</span>,
+    <span class="string">"Scalable infrastructure for enterprise systems"</span>,
+    <span class="string">"Consumer AI products with real-world utility"</span>,
+    <span class="string">"High-performance optimization platforms"</span>
+  ],
+  <span class="prop">longTerm</span>: <span class="string">"Intersection of AI, business systems, and large-scale impact"</span>
+};</pre>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact-section" id="contact">
+      <div class="contact-terminal">
+        <div class="terminal-header">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">connect</span>
+        </div>
+        <div class="terminal-body">
+          <p class="terminal-line"><span class="prompt">$</span> cat contact.txt</p>
+          <div class="contact-links">
+            <a href="mailto:anubhavgupta@usf.edu" class="contact-link">
+              <span class="link-icon">📧</span>
+              <span>anubhavgupta@usf.edu</span>
+            </a>
+            <a href="tel:+18134520632" class="contact-link">
+              <span class="link-icon">📞</span>
+              <span>(813) 452-0632</span>
+            </a>
+            <a href="https://linkedin.com/in/anubhav-gupta-software" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="LinkedIn">
+              <span class="link-icon">in</span>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/anubhav-gupta-software" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="GitHub">
+              <span class="link-icon">⌘</span>
+              <span>GitHub</span>
+            </a>
+          </div>
+          <p class="terminal-line mt"><span class="prompt">anubhav@portfolio:~$</span> <span class="blink">_</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built with &lt;3 and too much caffeine</p>
+    <p><span class="copyright">© 2025 Anubhav Gupta</span></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
