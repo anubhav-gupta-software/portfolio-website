@@ -154,6 +154,25 @@ main {
   flex-direction: column;
   justify-content: center;
   padding: 2rem 0;
+  align-items: center;
+}
+
+.hero-profile {
+  margin-bottom: 2rem;
+}
+
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--border);
+  box-shadow: 0 0 0 1px rgba(57, 197, 207, 0.2), 0 0 40px rgba(57, 197, 207, 0.15);
+  transition: box-shadow var(--transition);
+}
+
+.profile-photo:hover {
+  box-shadow: 0 0 0 2px var(--cyan-dim), 0 0 50px rgba(57, 197, 207, 0.25);
 }
 
 .terminal {
